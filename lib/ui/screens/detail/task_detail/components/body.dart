@@ -1,5 +1,6 @@
 import 'package:aking_to_do_list/others/constant.dart';
 import 'package:aking_to_do_list/ui/components/default_button.dart';
+import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/comment.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/edit_popup.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/section.dart';
 import 'package:flutter/material.dart';
@@ -25,83 +26,83 @@ class Body extends StatelessWidget {
               Radius.circular(5),
             ),
           ),
-          child: Column(
+          child: ListView(
+            padding: EdgeInsets.zero,
             children: [
               _buildButtonHeader(context),
-              SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildTitle(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildTitle(),
 
-                      //Assigned to
-                      _buildAssignee(),
-                      Divider(
-                        height: 2,
-                        color: Colors.grey,
+                    //Assigned to
+                    _buildAssignee(),
+                    Divider(
+                      height: 2,
+                      color: Colors.grey,
+                    ),
+
+                    //Due Data
+                    buildDueDate(),
+                    Divider(
+                      height: 2,
+                      color: Colors.grey,
+                    ),
+
+                    //Description
+                    _buildDescription(),
+                    Divider(
+                      height: 2,
+                      color: Colors.grey,
+                    ),
+
+                    //Members
+                    _buildMembers(),
+                    Divider(
+                      height: 2,
+                      color: Colors.grey,
+                    ),
+
+                    //Tag
+                    _buildTag(),
+
+                    //Comment
+                    Comment(),
+
+                    //Button
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      child: DefaultButton(
+                        "Complete Task",
+                        backgroundColor: bluePrimaryColor,
+                        press: () {},
                       ),
+                    ),
 
-                      //Due Data
-                      buildDueDate(),
-                      Divider(
-                        height: 2,
-                        color: Colors.grey,
-                      ),
-
-                      //Description
-                      _buildDescription(),
-                      Divider(
-                        height: 2,
-                        color: Colors.grey,
-                      ),
-
-                      //Members
-                      _buildMembers(),
-                      Divider(
-                        height: 2,
-                        color: Colors.grey,
-                      ),
-
-                      //Tag
-                      _buildTag(),
-
-                      //Build Comment
-
-                      //Button
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        child: DefaultButton(
-                          "Complete Task",
-                          backgroundColor: bluePrimaryColor,
-                          press: () {},
-                        ),
-                      ),
-
-                      //Show comment
-                      InkWell(
-                        onTap: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Comment",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    //Show comment
+                    InkWell(
+                      onTap: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Comment",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
                             ),
-                            SizedBox(width: 16),
-                            SvgPicture.asset(
-                              "assets/icons/show_more_icon.svg",
-                              width: 12,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                          ),
+                          SizedBox(width: 16),
+                          SvgPicture.asset(
+                            "assets/icons/show_more_icon.svg",
+                            width: 12,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
             ],

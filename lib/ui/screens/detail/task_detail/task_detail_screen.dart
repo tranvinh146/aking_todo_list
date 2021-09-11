@@ -11,15 +11,15 @@ class TaskDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ChangeNotifierProvider(
-        create: (_) => Comment(),
+        create: (_) => MyComment(),
         child: Body(),
       ),
     );
   }
 }
 
-class Comment with ChangeNotifier {
-  bool? _show;
+class MyComment with ChangeNotifier {
+  bool _show = false;
 
   show() {
     _show = true;

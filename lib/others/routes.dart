@@ -14,7 +14,6 @@ import 'package:aking_to_do_list/ui/screens/home/quick/quick_screen.dart';
 import 'package:aking_to_do_list/ui/screens/init/splash/splash_screen.dart';
 import 'package:aking_to_do_list/ui/screens/init/onbroading/onbroading_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 
 final Map<String, WidgetBuilder> routes = {
   //init screens

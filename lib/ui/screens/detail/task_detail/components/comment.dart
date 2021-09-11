@@ -10,18 +10,24 @@ class Comment extends StatelessWidget {
     return Column(
       children: [
         _buildWriteComment(),
+        SizedBox(height: 36),
         _buildMemberComment(),
         Text(
           "Lorem ipsum dolor sit amet,consectetur adipiscing.",
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, height: 1.5),
         ),
+        SizedBox(height: 24),
         _buildMemberComment(),
         Container(
           height: 180,
-          color: bluePrimaryColor,
+          margin: EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(5),
+            ),
+            image: DecorationImage(
+              image: AssetImage("assets/images/comment_photo.jpg"),
+              fit: BoxFit.cover,
             ),
           ),
         )
@@ -78,32 +84,38 @@ class Comment extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: 295,
+          margin: EdgeInsets.zero,
+          height: 90,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
               top: Radius.circular(5),
             ),
-            border: Border.all(),
+            border: Border.all(color: Color(0xFFEAEAEA)),
           ),
         ),
         Container(
-          padding: EdgeInsets.all(16),
+          margin: EdgeInsets.zero,
+          padding: EdgeInsets.symmetric(horizontal: 16),
           height: 50,
           decoration: BoxDecoration(
+            color: Color(0xFFF8F8F8),
             borderRadius: BorderRadius.vertical(
-              top: Radius.circular(5),
+              bottom: Radius.circular(5),
             ),
-            border: Border.all(),
+            border: Border.all(color: Color(0xFFEAEAEA)),
           ),
           child: Row(
             children: [
               SvgPicture.asset(
-                "assets/icons/attach_icon.svg",
+                "assets/icons/photo_icon.svg",
+                width: 22,
+              ),
+              SizedBox(
                 width: 20,
               ),
               SvgPicture.asset(
-                "assets/icons/photo_icon.svg",
-                width: 20,
+                "assets/icons/attach_icon.svg",
+                width: 22,
               ),
               Spacer(),
               Text(
