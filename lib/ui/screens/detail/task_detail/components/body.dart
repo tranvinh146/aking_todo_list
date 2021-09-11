@@ -3,6 +3,7 @@ import 'package:aking_to_do_list/ui/components/default_button.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/edit_popup.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/section.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -65,13 +66,12 @@ class Body extends StatelessWidget {
 
                       //Tag
                       _buildTag(),
-                      
+
                       //Build Comment
-                      
-                      
+
                       //Button
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        padding: const EdgeInsets.symmetric(vertical: 16),
                         child: DefaultButton(
                           "Complete Task",
                           backgroundColor: bluePrimaryColor,
@@ -81,15 +81,22 @@ class Body extends StatelessWidget {
 
                       //Show comment
                       InkWell(
-                        onTap: () {
-                          
-                        },
+                        onTap: () {},
                         child: Row(
-                          mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Comment"),
-                            Icon(Icons.arrow_downward),
+                            Text(
+                              "Comment",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(width: 16),
+                            SvgPicture.asset(
+                              "assets/icons/show_more_icon.svg",
+                              width: 12,
+                            ),
                           ],
                         ),
                       )
@@ -106,7 +113,10 @@ class Body extends StatelessWidget {
 
   Section _buildTag() {
     return Section(
-      leading: Icon(Icons.calendar_today),
+      leading: SvgPicture.asset(
+        "assets/icons/tag_icon.svg",
+        width: 20,
+      ),
       title: "Tag",
       child: Container(
         padding: EdgeInsets.all(10),
@@ -132,7 +142,10 @@ class Body extends StatelessWidget {
 
   Section _buildMembers() {
     return Section(
-      leading: Icon(Icons.group),
+      leading: SvgPicture.asset(
+        "assets/icons/members_icon.svg",
+        width: 20,
+      ),
       title: "Members",
       child: Container(
         height: 32,
@@ -150,7 +163,10 @@ class Body extends StatelessWidget {
 
   Section _buildDescription() {
     return Section(
-      leading: Icon(Icons.copy),
+      leading: SvgPicture.asset(
+        "assets/icons/description_icon.svg",
+        width: 20,
+      ),
       title: "Description",
       child: Container(
         width: 250,
@@ -167,10 +183,13 @@ class Body extends StatelessWidget {
 
   Section buildDueDate() {
     return Section(
-      leading: Icon(Icons.calendar_today),
+      leading: SvgPicture.asset(
+        "assets/icons/calendar_icon.svg",
+        width: 20,
+      ),
       title: "Due Date",
       child: Text(
-        "Aug 5, 2018",
+        "Aug 5, 2019",
         style: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.bold,

@@ -74,9 +74,9 @@ flutter:
         - asset: fonts/AvenirNextRoundedPro-Med.ttf
         - asset: fonts/AvenirNextRoundedPro-Demi.ttf
           weight: 700
-    - family:  AkingApp
+    - family:  AkingIcon
       fonts:
-       - asset: fonts/AkingApp.ttf
+       - asset: fonts/AkingIcon.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

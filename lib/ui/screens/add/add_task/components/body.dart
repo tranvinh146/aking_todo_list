@@ -3,14 +3,13 @@ import 'package:aking_to_do_list/logic/event/task_event/add_task_event.dart';
 import 'package:aking_to_do_list/ui/components/default_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../others/constant.dart';
 import 'date_picker.dart';
 
 class Body extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
     TaskBloc bloc = Provider.of<TaskBloc>(context);
@@ -266,9 +265,9 @@ class Body extends StatelessWidget {
                 color: Color(0xFFEAEAEA),
               ),
             ),
-            child: Icon(
-              Icons.attach_file,
-              size: 20,
+            child: SvgPicture.asset(
+              "assets/icons/attach_icon.svg",
+              width: 20,
             ),
           ),
         ],

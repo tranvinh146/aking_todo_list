@@ -1,4 +1,5 @@
 import 'package:aking_to_do_list/ui/components/dialog/add_dialog.dart';
+import 'package:aking_to_do_list/ui/components/footer/aking_icon_icons.dart';
 import 'package:aking_to_do_list/ui/screens/home/my_task/my_task_screen.dart';
 import 'package:aking_to_do_list/ui/screens/home/menu/menu_screen.dart';
 import 'package:aking_to_do_list/ui/screens/home/profile/profile_screen.dart';
@@ -34,7 +35,7 @@ class CustomBottomBar extends StatelessWidget {
                   buildItem(
                     0,
                     "My Task",
-                    Icons.check_circle,
+                    AkingIcon.check_icon,
                     () {
                       Navigator.pushNamedAndRemoveUntil(
                           context, MyTaskScreen.routeName, (route) => false);
@@ -43,7 +44,7 @@ class CustomBottomBar extends StatelessWidget {
                   buildItem(
                     1,
                     "Menu",
-                    Icons.menu,
+                    AkingIcon.menu_icon,
                     () {
                       Navigator.pushNamedAndRemoveUntil(
                           context, MenuScreen.routeName, (route) => false);
@@ -55,7 +56,7 @@ class CustomBottomBar extends StatelessWidget {
                   buildItem(
                     2,
                     "Quick",
-                    Icons.content_paste,
+                    AkingIcon.note_icon,
                     () {
                       Navigator.pushNamedAndRemoveUntil(
                           context, QuickScreen.routeName, (route) => false);
@@ -64,7 +65,7 @@ class CustomBottomBar extends StatelessWidget {
                   buildItem(
                     3,
                     "Profile",
-                    Icons.account_circle,
+                    AkingIcon.profile_icon,
                     () {
                       Navigator.pushNamedAndRemoveUntil(
                           context, ProfileScreen.routeName, (route) => false);
