@@ -85,12 +85,26 @@ class Comment extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.zero,
+          padding: EdgeInsets.all(16),
           height: 90,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
               top: Radius.circular(5),
             ),
             border: Border.all(color: Color(0xFFEAEAEA)),
+          ),
+          child: TextField(
+            maxLines: 3,
+            decoration: InputDecoration(
+              hintText: "Write a commet",
+              hintStyle: TextStyle(
+                color: Colors.grey,
+                fontSize: 16,
+              ),
+              border: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              contentPadding: EdgeInsets.zero,
+            ),
           ),
         ),
         Container(

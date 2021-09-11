@@ -3,14 +3,18 @@ import 'package:aking_to_do_list/ui/components/default_button.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/comment.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/edit_popup.dart';
 import 'package:aking_to_do_list/ui/screens/detail/task_detail/components/section.dart';
+import 'package:aking_to_do_list/ui/screens/detail/task_detail/task_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    ShowCommentModel showCommentModel = Provider.of<ShowCommentModel>(context);
+
     return Stack(
       children: [
         _buildBackground(),
@@ -69,7 +73,7 @@ class Body extends StatelessWidget {
                     _buildTag(),
 
                     //Comment
-                    Comment(),
+                    showCommentModel.show ? Comment() : Container(),
 
                     //Button
                     Padding(
@@ -82,26 +86,9 @@ class Body extends StatelessWidget {
                     ),
 
                     //Show comment
-                    InkWell(
-                      onTap: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Comment",
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(width: 16),
-                          SvgPicture.asset(
-                            "assets/icons/show_more_icon.svg",
-                            width: 12,
-                          ),
-                        ],
-                      ),
-                    )
+                    showCommentModel.show
+                        ? Container()
+                        : _buildShowComment(showCommentModel)
                   ],
                 ),
               ),
@@ -109,6 +96,31 @@ class Body extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  InkWell _buildShowComment(ShowCommentModel showCommentModel) {
+    return InkWell(
+      onTap: () {
+        showCommentModel.showComment();
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "Comment",
+            style: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(width: 16),
+          SvgPicture.asset(
+            "assets/icons/show_more_icon.svg",
+            width: 12,
+          ),
+        ],
+      ),
     );
   }
 
@@ -149,14 +161,44 @@ class Body extends StatelessWidget {
       ),
       title: "Members",
       child: Container(
-        height: 32,
-        width: 32,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-            image: AssetImage("assets/images/logo.png"),
-            fit: BoxFit.cover,
-          ),
+        height: 35,
+        padding: EdgeInsets.zero,
+        child: ListView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          itemCount: 5,
+          itemBuilder: (context, index) {
+            if (index == 4) {
+              return Container(
+                height: 32,
+                width: 32,
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(bottom: 5),
+                decoration: BoxDecoration(
+                    color: redPrimaryColor, shape: BoxShape.circle),
+                child: Text(
+                  "...",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              );
+            }
+            return Container(
+              margin: EdgeInsets.only(right: 5),
+              height: 32,
+              width: 32,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage("assets/images/mem_${index + 1}.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            );
+          },
         ),
       ),
     );
