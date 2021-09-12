@@ -1,16 +1,33 @@
-# aking_to_do_list
+<h1 align="center">Whollet Wallet</h1>
 
-A new Flutter project.
+<p align="center">A simple ICON wallet on Testnet</p>
+
+<br>
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is used in Devera Flutter course to demonstrate how to use ICON SDK.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## ICON ICX Testnet Faucet
+- [Testnet](https://faucet.ibriz.ai/)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Interface
+
+<img src="interface_README/welcome.png">
+
+<img src="interface_README/signup.png">
+
+<img src="interface_README/login.png">
+
+<img src="interface_README/home.png">
+
+
+## Pub Packages
+
+| Package  | Usage |
+| ------ | ------ |
+| [Flutter Icon Network](https://pub.dev/packages/flutter_icon_network) |  ICON supports SDK for 3rd party or user services development on Icon network. 
+| [Firebase Core](https://pub.dev/packages/firebase_core) | A Flutter plugin to use the Firebase Core API, which enables connecting to multiple Firebase apps.
+| [Firebase Auth](https://pub.dev/packages/provider) | Firebase Authentication provides backend services & easy-to-use SDKs to authenticate users to your app. 
+| [Cloud Firestore](https://pub.dev/packages/cloud_firestore) | Firestore is a flexible, scalable NoSQL cloud database to store and sync data.
