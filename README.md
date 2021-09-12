@@ -24,10 +24,9 @@ This project is used in Devera Flutter course to demonstrate how to do list with
 
 | Package  | Usage |
 | ------ | ------ |
-| [Provider](https://pub.dev/packages/provider) |  ICON supports SDK for 3rd party or user services development on Icon network. 
-| [Sqflite](https://pub.dev/packages/sqflite) | A Flutter plugin to use the Firebase Core API, which enables connecting to multiple Firebase apps.
-| [Path](https://pub.dev/packages/path) | Firebase Authentication provides backend services & easy-to-use SDKs to authenticate users to your app. 
-| [Flutter Svg](https://pub.dev/packages/flutter_svg) | Firebase Authentication provides backend services & easy-to-use SDKs to authenticate users to your app. 
-| [Table Calendar](https://pub.dev/packages/table_calendar) | Firebase Authentication provides backend services & easy-to-use SDKs to authenticate users to your app. 
-| [Flutter Slidable](https://pub.dev/packages/flutter_slidable) | Firebase Authentication provides backend services & easy-to-use SDKs to authenticate users to your app. 
-
+| [Provider](https://pub.dev/packages/provider) |  A wrapper around InheritedWidget to make them easier to use and more reusable.
+| [Sqflite](https://pub.dev/packages/sqflite) |  A self-contained, high-reliability, embedded, SQL database engine.
+| [Path](https://pub.dev/packages/path) | Provides common operations for manipulating paths: joining, splitting, normalizing, etc.
+| [Flutter Svg](https://pub.dev/packages/flutter_svg) | Allow painting and displaying Scalable Vector Graphics 1.1 files
+| [Table Calendar](https://pub.dev/packages/table_calendar) | Highly customizable, feature-packed calendar widget for Flutter.
+| [Flutter Slidable](https://pub.dev/packages/flutter_slidable) | A Flutter implementation of slidable list item with directional slide actions that can be dismissed.
