@@ -1,4 +1,4 @@
-<h1 align="center">Whollet Wallet</h1>
+<h1 align="center">Aking To Do List</h1>
 
 <p align="center">A simple ICON wallet on Testnet</p>
 
@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-This project is used in Devera Flutter course to demonstrate how to use ICON SDK.
+This project is used in Devera Flutter course to demonstrate how to do list with Flutter.
 
 
 ## ICON ICX Testnet Faucet
@@ -14,13 +14,11 @@ This project is used in Devera Flutter course to demonstrate how to use ICON SDK
 
 ## Interface
 
-<img src="interface_README/welcome.png">
+<img src="interface_README/init_screens.png">
 
-<img src="interface_README/signup.png">
+<img src="interface_README/login_screens.png">
 
-<img src="interface_README/login.png">
-
-<img src="interface_README/home.png">
+<img src="interface_README/home_screens.png">
 
 
 ## Pub Packages
