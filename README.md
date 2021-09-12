@@ -19,6 +19,12 @@ This project is used in Devera Flutter course to demonstrate how to do list with
 ### Home screens
 <img src="interface_README/home_screens.png">
 
+### Add screens
+<img src="interface_README/add_screens.png">
+
+### Detail screens
+<img src="interface_README/detail_screens.png">
+
 
 ## Pub Packages
 
