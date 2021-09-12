@@ -32,6 +32,7 @@ class _TaskCardState extends State<TaskCard> {
       child: Container(
         height: 80,
         margin: EdgeInsets.only(top: 18, left: 16, right: 16),
+        padding: EdgeInsets.zero,
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
           BoxShadow(
             color: Colors.black12,
@@ -42,8 +43,9 @@ class _TaskCardState extends State<TaskCard> {
         child: Row(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 25),
+              margin: EdgeInsets.symmetric(horizontal: 15),
               child: IconButton(
+                padding: EdgeInsets.zero,
                 onPressed: () {
                   // widget.onCompleteTask!(!_completed);
                   setState(() {
@@ -61,15 +63,19 @@ class _TaskCardState extends State<TaskCard> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  widget.title ?? "Unknown",
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: _completed ? Colors.grey : Colors.black,
-                    fontSize: 18,
-                    decoration: _completed
-                        ? TextDecoration.lineThrough
-                        : TextDecoration.none,
+                Container(
+                  padding: EdgeInsets.zero,
+                  width: 220,
+                  child: Text(
+                    widget.title ?? "Unknown",
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: _completed ? Colors.grey : Colors.black,
+                      fontSize: 16,
+                      decoration: _completed
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none,
+                    ),
                   ),
                 ),
                 Text(

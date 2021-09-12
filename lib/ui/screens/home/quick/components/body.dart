@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
       },
       {
         "note": "Meeting with Jessica in Central Park at 10:30PM",
-        "color": Colors.greenAccent,
+        "color": Color(0xFF5ABB56),
         "hasCheckList": true,
         "checkList": ["Buy a milk", "Buy a shampoo", "Buy a toothbrush"],
       },

@@ -40,6 +40,11 @@ class _TaskListState extends State<TaskList> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> title = [
+      "Read the book Zlatan",
+      "Meet according with design team in Central Park",
+      "Go fishing with Stephen"
+    ];
     TaskBloc _bloc = Provider.of<TaskBloc>(context);
     return SingleChildScrollView(
       child: Padding(
@@ -95,9 +100,15 @@ class _TaskListState extends State<TaskList> {
                 color: Colors.grey,
               ),
             ),
-            TaskCard(
-              title: "Meeting with someone",
-              time: "9:00 PM",
+            ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 3,
+              itemBuilder: (context, index) {
+                return TaskCard(
+                  title: title[index],
+                );
+              },
             ),
           ],
         ),

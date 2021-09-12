@@ -24,7 +24,7 @@ class ProjectList extends StatelessWidget {
       {
         "name": "Home",
         "amount": "10",
-        "color": Colors.greenAccent,
+        "color": Color(0xFF5ABB56),
       },
       {
         "name": "Meet",
