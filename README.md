@@ -25,7 +25,7 @@ This project is used in Devera Flutter course to demonstrate how to do list with
 ### Detail screens
 <img src="interface_README/detail_screens.png">
 
-###File Debug
+### File Debug
 [app-debug.apk](https://drive.google.com/file/d/1XUwSrw8rj1JfaAO49Mqukl2Cv49KM4LC/view?usp=sharing)
 
 ## Pub Packages
